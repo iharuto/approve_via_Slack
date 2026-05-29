@@ -1,0 +1,6 @@
+.env
+bridge.log
+.venv
+.claude
+.venv/
+__pycache__

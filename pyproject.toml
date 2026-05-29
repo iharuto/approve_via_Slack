@@ -1,0 +1,10 @@
+[project]
+name = "claude-slack-approval"
+version = "0.1.0"
+description = "Approve Claude Code tool calls from Slack via Socket Mode"
+requires-python = ">=3.10"
+dependencies = [
+    "slack-bolt>=1.18",
+    "flask>=3.0",
+    "python-dotenv>=1.0",
+]
