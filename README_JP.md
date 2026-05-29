@@ -1,18 +1,10 @@
 # claude-slack-approval
 
-Claude Code のツール実行承認を Slack から(スマホからでも)行えるようにします。
-サーバーをインターネットに公開する必要はありません。Slack で時間内に応答が無
-かった場合は、Claude Code 標準の IDE パーミッションプロンプトに自動でフォール
-バックします。
+<img src="example.png" width="200">
 
-Claude Code が `Bash`、`Write`、`Edit`、`MultiEdit` を実行しようとすると、
-`PreToolUse` フックがあなたの Slack に **承認 / 拒否** ボタン付きの DM を送信
-します。フックは Slack の応答を **60 秒間** 待機します。時間内に応答が無い場
-合、Slack の DM は「IDE 側に切替」というメッセージに書き換えられてボタンが消
-え、Claude Code 通常の IDE パーミッションプロンプトが表示されるので、PC から
-承認できます。Slack との通信は Socket Mode(送信側 WebSocket)を使うため、
-ホストは **受信ポート、公開ドメイン、ngrok、TLS 証明書のいずれも必要ありま
-せん**。
+SSH先の Claude Code のツール実行承認を Slack から(スマホから VPN に繋がなくても)行えるようにします。サーバーをインターネットに公開する必要はありません。Slack で時間内に応答が無かった場合は、Claude Code 標準の IDE パーミッションプロンプトに自動でフォールバックします。
+
+Claude Code が `Bash`、`Write`、`Edit`、`MultiEdit` を実行しようとすると、`PreToolUse` フックがあなたの Slack に **承認 / 拒否** ボタン付きの DM を送信します。フックは Slack の応答を **60 秒間** 待機します。時間内に応答が無い場合、Slack の DM は「IDE 側に切替」というメッセージに書き換えられてボタンが消え、Claude Code 通常の IDE パーミッションプロンプトが表示されるので、SSH 先から承認できます。Slack との通信は Socket Mode(送信側 WebSocket)を使うため、ホストは **受信ポート、公開ドメイン、ngrok、TLS 証明書のいずれも必要ありません**。
 
 ## ハイブリッド承認フロー
 
