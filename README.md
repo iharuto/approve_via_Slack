@@ -1,5 +1,7 @@
 # claude-slack-approval
 
+<img src="example.png" width="200">
+
 Approve Claude Code tool calls from Slack — including from your phone — without
 exposing your server to the public internet. Falls back to Claude Code's
 built-in IDE permission prompt if Slack doesn't respond in time.
